@@ -137,3 +137,7 @@
 .o-carou-height{
   height: 400px !important;
 }
+a:hover{
+  color: #fff;
+  font-size: 22px;
+}
