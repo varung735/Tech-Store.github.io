@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg bg-color navbar-dark">
@@ -276,12 +277,39 @@
     	<div class="item"><img src="https://rukminim1.flixcart.com/image/312/312/jjsw4nk0/smartwatch/n/d/n/amzbipwht-huami-original-imaf7ayzdyhhjhfz.jpeg?q=70" class="o-carou-height"></div>
   </div>
 
+  <!--Counter Section-->
+
+  <div class="container">
+    <div class="row">
+        <div class="four col-md-3 col-sm-6 col-xs-12">
+            <div class="counter-box colored"> <i class="fa fa-thumbs-o-up"></i> <span class="counter">2147</span>
+                <p>Happy Customers</p>
+            </div>
+        </div>
+        <div class="four col-md-3 col-sm-6 col-xs-12">
+            <div class="counter-box colored"> <i class="fa fa-group"></i> <span class="counter">3275</span>
+                <p>Registered Members</p>
+            </div>
+        </div>
+        <div class="four col-md-3 col-sm-6 col-xs-12">
+            <div class="counter-box colored"> <i class="fa fa-shopping-cart"></i> <span class="counter">289</span>
+                <p>Available Products</p>
+            </div>
+        </div>
+        <div class="four col-md-3 col-sm-6 col-xs-12">
+            <div class="counter-box colored"> <i class="fa fa-user"></i> <span class="counter">1563</span>
+                <p>Saved Trees</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <!--About Section-->
 
   <div class="container-fluid bg-color">
   	<div class="container">
   		<div class="row">
-  			<div class="col-md-3">
+  			<div class="col-md-3 col-sm-6 col-xs-12">
   				<ul class="about">
   					<h3 class="h-text h-pad">Our Products</h3>
   					<li>
@@ -301,7 +329,7 @@
   					</li>
   				</ul>
   		</div>
-  		<div class="col-md-3">
+  		<div class="col-md-3 col-sm-6 col-xs-12">
   				<ul class="about">
   					<h3 class="h-text h-pad">Our Branches</h3>
   					<li>
@@ -327,7 +355,7 @@
   					</li>
   				</ul>
   		</div>
-	  	<div class="col-md-3">
+	  	<div class="col-md-3 col-sm-6 col-xs-12">
   				<ul class="about">
   					<h3 class="h-text h-pad">FAQ's</h3>
   					<li>
@@ -341,7 +369,7 @@
   					</li>
   				</ul>
   		</div>
-  		<div class="col-md-3">
+  		<div class="col-md-3 col-sm-6 col-xs-12">
   				<ul class="about">
   					<h3 class="h-text h-pad">Pay us using</h3>
   					<li>
@@ -363,6 +391,8 @@
   		</div>
   	</div>
   </div>
+
+  <!--Contact NavBar-->
 
   <section id="Contact">
 		<nav class="navbar navbar-expand-lg bg-color navbar-dark">
@@ -397,6 +427,22 @@
         }
     }
 })
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+		$('.counter').each(function () {
+			$(this).prop('Counter',0).animate({
+				Counter: $(this).text()
+		}, {
+			duration: 4000,
+			easing: 'swing',
+				step: function (now) {
+					$(this).text(Math.ceil(now));
+				}
+			});
+		});
+	});
 	</script>
 </body>
 </html>
