@@ -1,3 +1,6 @@
+body::-webkit-scrollbar {
+  display: none;
+}
 .c-caption{
   padding-bottom: 350px !important;
 }
@@ -9,7 +12,7 @@
 	background-color: #232f3e !important;
 }
 .img-height{
-	height: 750px;
+	height: 740px !important;
 }
 .card-attr{
 	height: 173.137px;
@@ -30,7 +33,7 @@
 }
 .parallax{
 	background-image : url(images/jumbotron.jpg);
-	min-height: 300px;
+	min-height: 35%;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
@@ -38,8 +41,9 @@
 }
 
 .par-text{
-	padding-top: 75px;
-	font-size: 90px;
+	padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 90px;
 }
 .f-color{
 	color: #fff;
@@ -137,5 +141,15 @@
 .card:hover{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
 }
+@media only screen and (max-width: 768px){
+  .par-text{
+    font-size: 50px;
+  }
+  }
+  .owl-caro-style:hover{
+  width: 100%!important;
+  height: 100%;
+  padding: 10px;
+  margin: 25px;
 
-  
+}
