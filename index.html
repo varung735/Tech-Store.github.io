@@ -21,15 +21,10 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbar01">
-				<div class="topnav">
-					 <div class="search-container">
-   	 					<form action="/action_page.php" style="padding-left: 300px;">
-      						<input type="text" placeholder="Search.." name="search">
-     						<button type="submit"><i class="fa fa-search"></i></button>
-    					</form>
- 		 			 </div>
-				</div>
 				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">   
+     							<a href="#"><i class="fa fa-search" style="color: #fff;"></i>&nbsp;&nbsp;<input type="text" placeholder="Search.." name="search" style="width: 80%;margin-top: 4%;"></a>
+					</li>
 					<li class="nav-item">
 						<a href="" class="navbar-link navbar-brand a-hover">Home</a>
 					</li>
@@ -78,7 +73,7 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close">Submit</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close" onclick="login();">Submit</button>
 				</div>
 			</div>
 		</div>
@@ -112,7 +107,7 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close">Create</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close" onclick="register();">Create</button>
 				</div>
 			</div>
 		</div>
@@ -428,6 +423,7 @@
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<script type="text/javascript">
 		$('.owl-carousel').owlCarousel({
     loop:true,
@@ -461,6 +457,26 @@
 			});
 		});
 	});
+	</script>
+	<script type="text/javascript">
+		function register(){
+			swal.fire({
+				title: 'Account Created.',
+				text: 'Shop with us.',
+				icon: 'success',
+				confirmButtonText: 'Continue'
+			});
+		}
+	</script>
+		<script type="text/javascript">
+		function login(){
+			swal.fire({
+				title: 'Logged In.',
+				text: 'You are on.',
+				icon: 'success',
+				confirmButtonText: 'Continue'
+			});
+		}
 	</script>
 </body>
 </html>
